@@ -33,10 +33,6 @@ $products = getProducts();
                 <li class="list-group-item">Lieu de production: <?php echo $product["made_in"] ?></li>
                 <li class="list-group-item">Catégorie : <?php echo $product["category"] ?></li>
               </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
             </div>
           </article>
           <?php

@@ -10,6 +10,7 @@ if(isset($_GET["message"])) {
  ?>
 
 <form class="w-50 mx-auto my-5" action="login.php" method="post">
+  <h2 class="my-5">Accéder aux ventes privées</h2>
   <div class="form-group">
     <label for="userName">Votre nom</label>
     <input type="text" class="form-control" id="userName" name="user_name" required>
@@ -18,7 +19,9 @@ if(isset($_GET["message"])) {
     <label for="userPassword">Votre mot de passe</label>
     <input type="password" class="form-control" id="userPassword" name="user_password" required>
   </div>
-  <button type="submit" class="btn lightBg">Se connecter</button>
+  <div class="text-center">
+    <button type="submit" class="btn lightBg">Se connecter</button>
+  </div>
 </form>
 
  <?php
