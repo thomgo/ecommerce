@@ -24,14 +24,16 @@ $products = getProducts();
           ?>
           <article class="col-lg-6 my-4">
             <div class="card">
-              <div class="card-body">
+              <header class="card-header text-center darkBg">
                 <h5 class="card-title"><?php echo $product["name"] ?></h5>
+              </header>
+              <div class="card-body">
                 <p class="card-text"><?php echo $product["description"] ?></p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Prix : <?php echo $product["price"] ?></li>
-                <li class="list-group-item">Lieu de production: <?php echo $product["made_in"] ?></li>
-                <li class="list-group-item">Catégorie : <?php echo $product["category"] ?></li>
+                <li class="list-group-item bg-light">Prix : <?php echo $product["price"] ?> €</li>
+                <li class="list-group-item bg-light">Lieu de production: <?php echo $product["made_in"] ?></li>
+                <li class="list-group-item bg-light">Catégorie : <?php echo $product["category"] ?></li>
               </ul>
             </div>
           </article>
