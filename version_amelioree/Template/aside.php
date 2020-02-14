@@ -12,11 +12,11 @@
       ?>
     </ul>
   </div>
-  <a href="logout.php" class="btn lightBg  my-3">Deconnexion</a>
+  <a href="logout.php" class="btn btn-warning my-3">Deconnexion</a>
 
   <div class="card w-100 mt-5">
     <header class="card-header darkBg">
-      <a class="text-white" href="basket.php" class="my-3">Votre panier</a>
+      <h4>Panier</h4>
     </header>
     <ul class="list-group w-100">
       <?php
@@ -28,4 +28,5 @@
        <li class='list-group-item'>Total : <?php echo $_SESSION["basketAmount"]; ?></li>
     </ul>
   </div>
+  <a class="btn btn-success my-3" href="basket.php" class="my-3">Voir le panier</a>
 </aside>
