@@ -29,18 +29,21 @@ if(isset($_GET["success"])) {
           ?>
           <article class="col-lg-6 my-4">
             <div class="card">
-              <div class="card-body">
+              <header class="card-header text-center darkBg">
                 <h5 class="card-title"><?php echo $product["name"] ?></h5>
-                <p class="card-text"><?php echo $product["description"] ?></p>
+              </header>
+              <div class="card-body">
+                <!-- Permet de ne pas afficher tout le texte de description mais seulement les 150 premiers caractères -->
+                <p class="card-text"><?php echo substr($product["description"],0,150) . "..." ?></p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Prix : <?php echo $product["price"] ?></li>
-                <li class="list-group-item">Lieu de production: <?php echo $product["made_in"] ?></li>
-                <li class="list-group-item">Catégorie : <?php echo $product["category"] ?></li>
+                <li class="list-group-item bg-light">Prix : <?php echo $product["price"] ?> €</li>
+                <li class="list-group-item bg-light">Lieu de production: <?php echo $product["made_in"] ?></li>
+                <li class="list-group-item bg-light">Catégorie : <?php echo $product["category"] ?></li>
+                <li class="list-group-item bg-light text-center">
+                  <a href="<?php echo 'single.php?id=' . $product['id']; ?>" class="btn lightBg">Voir</a>
+                </li>
               </ul>
-              <div class="card-body">
-                <a href="<?php echo 'single.php?id=' . $product['id']; ?>" class="btn lightBg">Voir</a>
-              </div>
             </div>
           </article>
           <?php
