@@ -23,7 +23,7 @@ if(isset($_GET["success"])) {
         <div class="row">
           <?php
             //On boucle pour afficher tous les produits contenus dans le panier en session
-            foreach ($_SESSION["basket"] as $key => $product) {
+            foreach ($_SESSION["cart"] as $key => $product) {
           ?>
           <article class="col-lg-6 my-4">
             <div class="card">
@@ -40,7 +40,7 @@ if(isset($_GET["success"])) {
                 <li class="list-group-item bg-light">Catégorie : <?php echo $product["category"] ?></li>
                 <li class="list-group-item bg-light text-center">
                   <!-- Lien pour retirer un produit du panier -->
-                  <a href="<?php echo 'cartTreatment.php?key=' . $key . '&action=remove'; ?>" class="btn lightBg">Retirer du panier</a>
+                  <a href="<?php echo 'cartTreatment.php?key=' . $product["id"] . '&action=remove'; ?>" class="btn lightBg">Retirer du panier</a>
                 </li>
               </ul>
             </div>

@@ -15,8 +15,8 @@ if(!empty($_POST)) {
       //Si c'est le cas on démarre une session pour y stocker les informations de l'utilisateur
       session_start();
       $_SESSION["user"] = $user;
-      $_SESSION["basket"] = [];
-      $_SESSION["basketAmount"] = 0;
+      $_SESSION["cart"] = [];
+      $_SESSION["cartAmount"] = 0;
       header("Location: products.php");
       //On met un exit pour arrêter l'execution du script, autrement la redirection n'aura pas le temps de se faire
       exit;

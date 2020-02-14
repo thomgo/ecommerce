@@ -21,11 +21,11 @@
     <ul class="list-group w-100">
       <?php
         //On boucle sur le panier stocké en session pour afficher tous ses produits
-        foreach ($_SESSION["basket"] as $key => $product) {
+        foreach ($_SESSION["cart"] as $key => $product) {
           echo "<li class='list-group-item w-100'>". $product['name'] . "</li>";
         }
        ?>
-       <li class='list-group-item'>Total : <?php echo $_SESSION["basketAmount"]; ?></li>
+       <li class='list-group-item'>Total : <?php echo $_SESSION["cartAmount"]; ?></li>
     </ul>
   </div>
   <a class="btn btn-success my-3" href="cart.php" class="my-3">Voir le panier</a>
