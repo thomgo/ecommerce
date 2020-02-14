@@ -7,10 +7,12 @@ if(isset($_GET["key"]) && isset($_GET["action"])) {
   session_start();
   // On sécurise la clé transmisse par l'url
   $key = intval(htmlspecialchars($_GET["key"]));
+  // On récupère le produit associé à la clé
   $product = getProduct($key);
-
+  // Si la clé ne correspond à aucun produit
   if(!$product) {
     header("Location: products.php");
+    // Attention ici le exit est important autrement la redidrection n'est pas effectuée
     exit();
   }
   // Si l'action concerne un ajout au panier

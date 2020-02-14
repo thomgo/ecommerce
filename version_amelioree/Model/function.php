@@ -70,10 +70,13 @@ function getProducts() {
 
 //Fonction qui sur la base d'un id et de la fonction getProducts renvoie un seul produit
 function getProduct($id) {
+  // On récupère la liste de produits
   $products = getProducts();
+  // Si l'id correspond à un produit on renvoie ce produit
   if (array_key_exists($id, $products)) {
     return $products[$id];
   }
+  // Sinon on renvoie false
   return false;
 }
 
