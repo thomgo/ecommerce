@@ -2,7 +2,7 @@
 
 Il s'agit d'un exercice PHP développé dans le cadre de mon poste de formateur en développement web. L'objectif est que les étudiants pratiquent le PHP procédural et se familiarisent ainsi avec les fonctionnalités de base du langage appliquées au web.
 
-Ce projet connaît plusieurs versions qui évoluent en difficulté avec la montée en compétence des étudiant pendant leur formation. A ce stade les notions de base de données et de modèle MVC ne sont pas intégrées. Un fichier est donné pour simuler la BDD afin que les étudiants puissent se concentrer sur l'organisation du projet et le code PHP.
+Ce projet connaît plusieurs versions qui évoluent en difficulté avec la montée en compétence des étudiants pendant leur formation. A ce stade les notions de base de données et de modèle MVC ne sont pas intégrées. Un fichier est fourni pour simuler la BDD afin que les étudiants puissent se concentrer sur l'organisation du projet et le code PHP.
 
 Mis à part l'apprentissage du PHP ce projet introduit également la notion de framework front avec Bootstrap qui leur permet de maquetter rapidement une application en utilisant du code produit par quelqu'un d'autre.
 
