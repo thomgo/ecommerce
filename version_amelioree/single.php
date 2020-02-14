@@ -20,18 +20,18 @@ $product = getProduct($id);
       <div class="container-fluide">
         <?php echo $product["description"]; ?>
       </div>
-      <div>
-        <span class="badge badge-secondary">Prix : <?php echo $product["price"] ?>€</span>
+      <div class="my-3">
+        <span class="badge badge-secondary p-2">Prix : <?php echo $product["price"] ?>€</span>
         <?php
         if($product["stock"]) {
-          echo "<span class='badge badge-success'>Disponible</span>";
+          echo "<span class='badge badge-success p-2'>Disponible</span>";
         }
         else {
-          echo "<span class='badge badge-danger'>Indisponible</span>";
+          echo "<span class='badge badge-danger p-2'>Indisponible</span>";
         }
          ?>
-        <span class="badge badge-secondary">Catégorie : <?php echo $product["category"] ?></span>
-        <span class="badge badge-secondary">Lieu de production :<?php echo $product["made_in"] ?></span>
+        <span class="badge badge-secondary p-2">Catégorie : <?php echo $product["category"] ?></span>
+        <span class="badge badge-secondary p-2">Lieu de production : <?php echo $product["made_in"] ?></span>
       </div>
       <?php
         //Si le produit est disponible on met un boutton d'ajout au panier
