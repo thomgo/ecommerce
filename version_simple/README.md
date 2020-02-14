@@ -44,3 +44,8 @@ Dans votre projet, il y aura un dossier Model, contenant un fichier function.php
 Dans votre projet, il y aura un dossier Template, contenant les fichiers header, footer et aside.php en effet il faut maintenant commencer à gérer votre template grâce au includes. Il en va de la maintenabilité de votre projet.
 
 Vous utilisez le dossier de travail qui vous est fourni !
+
+## Pour aller plus loin
+
+- Créez la page single qui permet de visualiser les informations d’un produit en détail quand on clique dessus
+- Ajoutez un bouton permettant à l’utilisateur de se déconnecter et revenir au formulaire d’accueil
