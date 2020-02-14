@@ -40,7 +40,8 @@ if(isset($_GET["success"])) {
                 <li class="list-group-item bg-light">Catégorie : <?php echo $product["category"] ?></li>
                 <li class="list-group-item bg-light text-center">
                   <!-- Lien pour retirer un produit du panier -->
-                  <a href="<?php echo 'baskettreatment.php?key=' . $key . '&action=remove'; ?>" class="btn lightBg">Retirer du panier</a>                </li>
+                  <a href="<?php echo 'cartTreatment.php?key=' . $key . '&action=remove'; ?>" class="btn lightBg">Retirer du panier</a>
+                </li>
               </ul>
             </div>
           </article>

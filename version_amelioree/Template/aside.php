@@ -28,5 +28,5 @@
        <li class='list-group-item'>Total : <?php echo $_SESSION["basketAmount"]; ?></li>
     </ul>
   </div>
-  <a class="btn btn-success my-3" href="basket.php" class="my-3">Voir le panier</a>
+  <a class="btn btn-success my-3" href="cart.php" class="my-3">Voir le panier</a>
 </aside>

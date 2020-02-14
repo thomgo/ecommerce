@@ -36,7 +36,7 @@ $product = getProduct($id);
       <?php
         //Si le produit est disponible on met un boutton d'ajout au panier
         if($product["stock"]) {
-          echo "<a href='baskettreatment.php?key=". $id . "&action=add' class='btn lightBg my-3'>Ajouter au panier</a>";
+          echo "<a href='cartTreatment.php?key=". $id . "&action=add' class='btn lightBg my-3'>Ajouter au panier</a>";
         }
        ?>
     </section>
