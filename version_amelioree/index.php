@@ -12,9 +12,9 @@ if(isset($_GET["success"])) {
   $message = htmlspecialchars($_GET["success"]);
   echo "<div class='alert alert-success w-50 mx-auto'>" . $message . "</div>";
 }
- ?>
+?>
 
-<form class="w-50 mx-auto my-5" action="login.php" method="post">
+<form class="w-50 mx-auto my-5" action="loginTreatment.php" method="post">
   <h2 class="my-5">Accéder aux ventes privées</h2>
   <div class="form-group">
     <label for="userName">Votre nom</label>
@@ -30,7 +30,7 @@ if(isset($_GET["success"])) {
   </div>
 </form>
 
- <?php
+<?php
  //On charge le footer
  include "Template/footer.php"
-  ?>
+ ?>
