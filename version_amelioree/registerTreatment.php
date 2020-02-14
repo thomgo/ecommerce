@@ -1,11 +1,10 @@
 <?php
+require "Service/formManager.php";
 //Si le formulaire n'est pas vide on le vérifie
 if(!empty($_POST)) {
   $errors ="";
   //On sécurise les entrées du formulaire
-  foreach ($_POST as $key => $value) {
-    $_POST[$key] = htmlspecialchars($value);
-  }
+  $_POST = cleanForm($_POST);
 
   //On boucle pour vérifier si une valeur est vide
   $isEmpty = false;
@@ -28,7 +27,7 @@ if(!empty($_POST)) {
   if($_POST["user_password"] !== $_POST["user_password_confirm"]) {
     $errors .= "3";
   }
-  //Si le mot de passe ne respect pas les critères demandés
+  //Si le mot de passe ne respecte pas les critères demandés
   if(!preg_match("#(?=.*[A-Z]{1,})(?=.*[0-9]{1,}).{6,}#", $_POST["user_password"])) {
     $errors .= "4";
   }
