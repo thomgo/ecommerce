@@ -11,6 +11,7 @@ if(isset($_GET["message"])) {
  ?>
 
 <form class="w-50 mx-auto my-5" action="registerTreatment.php" method="post">
+  <h2 class="my-5">Créer votre compte</h2>
   <div class="form-group">
     <label for="userName">Votre nom</label>
     <input type="text" class="form-control" id="userName" name="user_name" <?php if(isset($_SESSION["answers"])){echo "value=" . $_SESSION['answers']['user_name'];} ?>>
@@ -24,13 +25,15 @@ if(isset($_GET["message"])) {
     <input type="password" class="form-control" id="userPasswordConfirm" name="user_password_confirm" <?php if(isset($_SESSION["answers"])){echo "value=" . $_SESSION['answers']['user_password_confirm'];} ?>>
   </div>
   <div class="form-group col-md-4">
-      <label for="inputState">Vous êtes...</label>
-      <select id="inputState" class="form-control" name="user_sexe">
-        <option <?php if(isset($_SESSION["answers"]) && $_SESSION["answers"]["user_sexe"] === "Homme"){echo "selected='selected'";} ?>>Homme</option>
-        <option <?php if(isset($_SESSION["answers"]) && $_SESSION["answers"]["user_sexe"] === "Femme"){echo "selected='selected'";} ?>>Femme</option>
-      </select>
-    </div>
-  <button type="submit" class="btn lightBg">Enregistrer</button>
+    <label for="inputState">Vous êtes...</label>
+    <select id="inputState" class="form-control" name="user_sexe">
+      <option <?php if(isset($_SESSION["answers"]) && $_SESSION["answers"]["user_sexe"] === "Homme"){echo "selected='selected'";} ?>>Homme</option>
+      <option <?php if(isset($_SESSION["answers"]) && $_SESSION["answers"]["user_sexe"] === "Femme"){echo "selected='selected'";} ?>>Femme</option>
+    </select>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn lightBg">Enregistrer</button>
+  </div>
 </form>
 
  <?php
