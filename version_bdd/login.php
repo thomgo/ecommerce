@@ -10,7 +10,7 @@ if(!empty($_POST)) {
   //On nettoie les entrées du formulaire
   $_POST = clearForm($_POST);
   //On récupère l'utilisateur stocké sur le site
-  $user = getUser($_POST, $db);
+  $user = getUserByName($_POST["user_name"], $db);
   //On vérifie si la db a trouvé un utilisateur
   if(!empty($user) && password_verify($_POST["user_password"], $user["password"])) {
     startUserSession($user);

@@ -1,8 +1,8 @@
 <?php
 //Fonction qui récupère un seul utilisateur en DB
-function getUser($user, $db) {
+function getUserByName($user_name, $db) {
   $query = $db->prepare("SELECT * FROM user WHERE nameUser =  ?");
-  $query->execute([$user["user_name"]]);
+  $query->execute([$user_name]);
   $user = $query->fetch(PDO::FETCH_ASSOC);
   return $user;
 }
