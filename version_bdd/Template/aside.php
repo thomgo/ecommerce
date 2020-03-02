@@ -3,13 +3,11 @@
     <header class="card-header darkBg">
       <h4><i class="fas fa-user-ninja"></i> Profil</h3>
     </header>
+    <!-- On affiche les données de l'utilisateur stockées en session -->
     <ul class="list-group w-100">
-      <?php
-      //On boucle sur l'utilisateur stocké en session pour afficher toutes ses informations
-      foreach ($_SESSION["user"] as $key => $value) {
-        echo "<li class='list-group-item'>$key : $value</li>";
-      }
-      ?>
+      <li class='list-group-item'>Nom : <?php echo $_SESSION["user"]["nameUser"] ?></li>
+      <li class='list-group-item'>Sexe : <?php echo $_SESSION["user"]["sexe"] ?></li>
+      <li class='list-group-item'>Status : <?php echo $_SESSION["user"]["status"] ?></li>
     </ul>
   </div>
   <a href="logout.php" class="btn btn-warning my-3">Deconnexion</a>

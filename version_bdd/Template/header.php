@@ -20,7 +20,7 @@
   <header class="jumbotron jumbotron-fluid darkBg">
     <section class="container">
       <h1 class="display-4">La bonne affaire</h1>
-      <p class="lead">Un exemple de site intégrant Bootstrap et du PHP sans bases de données</p>
+      <p class="lead">Un exemple de site intégrant Bootstrap et du PHP avec base de données</p>
     </section>
   </header>
 

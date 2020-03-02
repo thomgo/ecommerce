@@ -2,7 +2,7 @@
 </main>
 <footer class="jumbotron jumbotron-fluid mb-0 mt-5 py-2 darkBg text-center">
   <div class="container">
-    <p class="lead">Ce site, qui fait office d'exercice pour les étudiants a été réalisé dans le cadre de mon poste de formateur à l'ADEP de Roubaix</p>
+    <p class="lead">Ce site qui fait office d'exercice pour les étudiants a été réalisé dans le cadre de mon poste de formateur à l'ADEP de Roubaix</p>
   </div>
 </footer>
 
