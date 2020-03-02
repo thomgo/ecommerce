@@ -7,6 +7,7 @@ displayMessages();
  ?>
 
 <form class="w-50 mx-auto my-5" action="registerTreatment.php" method="post">
+  <h2 class="my-5">Créer votre compte</h2>
   <div class="form-group">
     <label for="userName">Votre nom</label>
     <input type="text" class="form-control" id="userName" name="user_name" <?php if(isset($_SESSION["answers"])){echo "value=" . $_SESSION['answers']['user_name'];} ?>>
@@ -26,7 +27,9 @@ displayMessages();
         <option <?php if(isset($_SESSION["answers"]) && $_SESSION["answers"]["user_sexe"] === "Femme"){echo "selected='selected'";} ?>>Femme</option>
       </select>
     </div>
-  <button type="submit" class="btn lightBg">Enregistrer</button>
+    <div class="text-center">
+      <button type="submit" class="btn lightBg">Enregistrer</button>
+    </div>
 </form>
 
  <?php
