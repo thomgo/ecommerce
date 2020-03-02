@@ -3,7 +3,7 @@
 require "Model/db.php";
 require "Model/productManager.php";
 require "Service/errorManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 
 //On restreint l'accès aux seuls administrateurs
 restrictToAdmin();
@@ -21,8 +21,8 @@ displayMessages();
       <h2>Gérer les produits du site <a href="addProduct.php" class="btn lightBg">Ajouter un produit <i class="fas fa-plus-circle"></i></a></h2>
       <div class="container-fluide">
         <div class="row">
-          <table class="table my-5">
-            <thead class="lightBg">
+          <table class="table my-4">
+            <thead class="darkBg">
               <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nom</th>

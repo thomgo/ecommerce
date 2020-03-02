@@ -1,6 +1,6 @@
 <?php
 require "Service/errorManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 
 restrictToAdmin();
 
@@ -51,7 +51,9 @@ displayMessages();
               <label for="image">Image d'illustration</label>
               <input type="file" class="form-control" id="image" name="image">
             </div>
-            <button type="submit" class="btn lightBg">Enregistrer</button>
+            <div class="text-center">
+              <button type="submit" class="btn lightBg">Enregistrer</button>
+            </div>
           </form>
         </div>
       </div>

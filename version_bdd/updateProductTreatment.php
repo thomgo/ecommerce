@@ -2,7 +2,7 @@
 //On charge les fonctions de gestion des données
 require "Model/db.php";
 require "Model/productManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 
 restrictToAdmin();
 

@@ -3,7 +3,7 @@
 require "Model/db.php";
 require "Model/productManager.php";
 require "Service/errorManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 
 restrictToAdmin();
 
@@ -20,7 +20,7 @@ displayMessages();
     <section class="col-lg-9">
       <!-- Si on a trouvé un produit en BD on affiche le formulaire -->
       <?php if(!empty($product)) { ?>
-      <h2>Remplissez le formulaire  pour ajouter un produit</h2>
+      <h2>Modifier le produit</h2>
       <div class="container-fluide">
         <div class="row">
           <form class="w-75 mx-auto my-5" action="updateProductTreatment.php" method="post">

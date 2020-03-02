@@ -3,7 +3,7 @@
 require "Model/db.php";
 require "Model/productManager.php";
 require "Model/imageManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 
 restrictToAdmin();
 
