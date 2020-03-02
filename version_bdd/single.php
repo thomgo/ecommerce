@@ -2,7 +2,7 @@
 //On charge les fonctions pour accéder aux données
 require "Model/db.php";
 require "Model/productManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 
 //Si aucun utilisateur est enregistré en session on renvoi à l'acceuil
 restrictToUser();
@@ -36,7 +36,7 @@ include "Template/header.php";
       <?php
         //Si le produit est disponible on met un boutton d'ajout au panier
         if($product["stock"]) {
-          echo "<a href='baskettreatment.php?key=". $id . "&action=add' class='btn lightBg my-3'>Ajouter au panier</a>";
+          echo "<a href='cartTreatment.php?key=". $id . "&action=add' class='btn lightBg my-3'>Ajouter au panier</a>";
         }
        ?>
     </section>

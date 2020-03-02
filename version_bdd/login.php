@@ -2,7 +2,7 @@
 //On charge les fichiers dont on a besoin
 require "Model/db.php";
 require "Model/userManager.php";
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 require "Service/formChecker.php";
 
 //On vérifie si le formulaire a été rempli
@@ -13,7 +13,7 @@ if(!empty($_POST)) {
   $user = getUser($_POST, $db);
   //On vérifie si la db a trouvé un utilisateur
   if(!empty($user) && password_verify($_POST["user_password"], $user["password"])) {
-    initializeUserSession($user);
+    startUserSession($user);
     header("Location: products.php");
     //On met un exit pour arrêter l'execution du script, autrement la redirection n'aura pas le temps de se faire
     exit;

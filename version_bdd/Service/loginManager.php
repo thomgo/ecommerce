@@ -6,12 +6,16 @@ function initializeAnonymousSession($answers) {
   $_SESSION["answers"] = $answers;
 }
 
-//Fonction de démarrage standard d'une session utilisateur
-function initializeUserSession($user) {
+// Function qui démarre une session avec les informations de l'utilisateur
+function startUserSession($user) {
   session_start();
+  // Ici on stocke les infos utilisateur pour y accéder plus tard
   $_SESSION["user"] = $user;
-  $_SESSION["basket"] = [];
-  $_SESSION["basketAmount"] = 0;
+  // On représente le panier utilisateur par un tableau stocké en session
+  // On utilise un tableau car l'utilisateur peut avoir plusieurs produits dans son panier
+  $_SESSION["cart"] = [];
+  // Par defaut le montant du panier est à 0
+  $_SESSION["cartAmount"] = 0;
 }
 
 //Fonction de déconnexion

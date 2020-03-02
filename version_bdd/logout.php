@@ -1,4 +1,4 @@
 <?php
-require "Service/sessionManager.php";
+require "Service/loginManager.php";
 logout();
  ?>

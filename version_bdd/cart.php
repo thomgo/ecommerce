@@ -1,29 +1,24 @@
 <?php
-//On charge les fonctions pour accéder aux données
-require "Model/db.php";
-require "Model/productManager.php";
-require "Service/errorManager.php";
 require "Service/loginManager.php";
+require "Service/errorManager.php";
 
-//Si aucun utilisateur est enregistré en session on renvoi à l'acceuil
+//On restreint l'accès de la page aux utilisateurs enregistrés
 restrictToUser();
 
-//On récupère nos produits via la fonction, plus tard celle-ci effectuera une requête en base de données
-$products = getProducts($db);
-
 include "Template/header.php";
-//Si une confirmation de succès
+
+//Si une confirmation de succès pour un retrait de produit
 displayMessages();
  ?>
 
  <div class="row mt-5">
    <section class="col-lg-9">
-     <h2>Nos derniers produits</h2>
+     <h2>Votre panier</h2>
      <div class="container-fluide">
        <div class="row">
          <?php
-           //On boucle pour afficher tous les produits contenus dans la variable products
-           foreach ($products as $key => $product) {
+           //On boucle pour afficher tous les produits contenus dans le panier en session
+           foreach ($_SESSION["cart"] as $key => $product) {
          ?>
          <article class="col-lg-6 my-4">
            <div class="card">
@@ -39,7 +34,8 @@ displayMessages();
                <li class="list-group-item bg-light">Lieu de production: <?php echo $product["made_in"] ?></li>
                <li class="list-group-item bg-light">Catégorie : <?php echo $product["category"] ?></li>
                <li class="list-group-item bg-light text-center">
-                 <a href="<?php echo 'single.php?id=' . $product['id']; ?>" class="btn lightBg">Voir</a>
+                 <!-- Lien pour retirer un produit du panier -->
+                 <a href="<?php echo 'cartTreatment.php?key=' . $product["id"] . '&action=remove'; ?>" class="btn lightBg">Retirer du panier</a>
                </li>
              </ul>
            </div>
