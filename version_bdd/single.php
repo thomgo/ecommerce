@@ -6,7 +6,7 @@ require "Service/loginManager.php";
 
 //Si aucun utilisateur n'est enregistré en session on renvoi à l'acceuil
 restrictToUser();
-//On récupère notre produits via la fonction
+// On récupère notre produits via la fonction du manager qui attend l'id transmis par l'url
 $id = intval(htmlspecialchars($_GET["id"]));
 $product = getProduct($id, $db);
 
@@ -16,6 +16,10 @@ include "Template/header.php";
  <div class="row mt-5">
    <section class="col-lg-9">
      <h2><?php echo $product["name"]; ?></h2>
+     <!-- Si une image est associée au produit on l'affiche -->
+     <?php if(!empty($product["path"])) :?>
+       <img class="img-fluid" src="<?php echo $product["path"];?>" alt="">
+     <?php endif; ?>
      <div class="container-fluide">
        <?php echo $product["description"]; ?>
      </div>
