@@ -3,7 +3,7 @@
 require "Model/db.php";
 require "Model/userManager.php";
 require "Service/loginManager.php";
-require "Service/formChecker.php";
+require "Service/formManager.php";
 
 //On vérifie si le formulaire a été rempli
 if(!empty($_POST)) {
